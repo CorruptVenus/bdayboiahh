@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secret Message</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffe1ef, #d9f7ff, #fff4d9);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #555;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+        width: 320px;
+        backdrop-filter: blur(6px);
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #ff7fa8;
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 10px;
+        width: 90%;
+        border: 2px solid #ffc7dd;
+        border-radius: 10px;
+        background: #fff;
+        font-size: 16px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: #ff94b7;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: #ffb6d9;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #ff9cc8;
+        transform: scale(1.05);
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #8c6b95;
+        display: none;
+    }
+
+    .sparkles {
+        font-size: 22px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎀 Enter Secret Code 🎀</h1>
+    <input type="text" id="codeInput" placeholder="Type your code...">
+    <br>
+    <button onclick="checkCode()">Reveal ✨</button>
+
+    <p id="message"><span class="sparkles">✨</span> Yay u unlocked the msggg! <br>💗 <a href="https://www.reveal-it.com/gift/f643db583c166bca6f004c401efbe4e5">SURPRISE!</a> 💗 <span class="sparkles">✨</span></p>
+</div>
+
+<script>
+    function checkCode() {
+        const entered = document.getElementById("codeInput").value;
+
+        // ✨ Change your secret code here:
+        const secret = "iamdumb";
+
+        if (entered === secret) {
+            document.getElementById("message").style.display = "block";
+        } else {
+            alert("Oops! Wrong code. Try again! 💖");
+        }
+    }
+</script>
+
+</body>
+</html>
